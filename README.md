@@ -1,2 +1,3 @@
-# thebot
+# Wulfrick
 Discord Bot
+by kvba
