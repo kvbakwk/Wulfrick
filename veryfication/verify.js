@@ -1,5 +1,16 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
 
+const verify = (client) => {
+    client.on('guildMemberAdd', async member => {
+        verifyUser(client, member)
+    })
+    client.on('interactionCreate', async i => {
+        verifyClick(client, i)
+    })
+}
+
+
+
 const verifyUser = (c, gMember) => {
 
     const embed = new EmbedBuilder()
@@ -17,4 +28,25 @@ const verifyUser = (c, gMember) => {
     c.channels.cache.get('502452827562442757').send({ embeds: [embed], components: [row] })
 }
 
-module.exports = verifyUser
+const verifyClick = (c, i) => {
+    if (i.isButton()) {
+        if (i.customId == i.member.user.id) {
+            i.member.roles.remove(c.guilds.cache.get('489087056241229845').roles.cache.get('501127326453465088'))
+            i.member.roles.add(c.guilds.cache.get('489087056241229845').roles.cache.get('513438458161922079'))
+            i.message.delete()
+                .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+                .catch(console.error);
+            i.reply({ content: 'Yeah, you are good', ephemeral: true })
+            return true
+        } else if (i.customId.toString().length) {
+            i.reply({ content: 'Kliknij może swoją weryfijację, co?', ephemeral: true })
+            return true
+        } else {
+            return false
+        }
+    }
+    return false
+}
+
+
+module.exports = verify
