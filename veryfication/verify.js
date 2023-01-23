@@ -1,4 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js')
+const verifyConfig = require('../config.json').verify
 
 const verify = (client) => {
     client.on('guildMemberAdd', async member => {
@@ -31,15 +32,17 @@ const verifyUser = (c, gMember) => {
 const verifyClick = (c, i) => {
     if (i.isButton()) {
         if (i.customId == i.member.user.id) {
+            const messages = verifyConfig.messages.goodVerifyClick
             i.member.roles.remove(c.guilds.cache.get('489087056241229845').roles.cache.get('501127326453465088'))
             i.member.roles.add(c.guilds.cache.get('489087056241229845').roles.cache.get('513438458161922079'))
             i.message.delete()
-                .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+                // .then(msg => console.log(`Deleted message from ${msg.author.username}`))
                 .catch(console.error);
-            i.reply({ content: 'Yeah, you are good', ephemeral: true })
+            i.reply({ content: messages[Math.floor(Math.random() * messages.length)], ephemeral: true })
             return true
         } else if (i.customId.toString().length) {
-            i.reply({ content: 'Kliknij może swoją weryfijację, co?', ephemeral: true })
+            const messages = verifyConfig.messages.otherVerifyClick
+            i.reply({ content: messages[Math.floor(Math.random() * messages.length)], ephemeral: true })
             return true
         } else {
             return false

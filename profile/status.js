@@ -1,17 +1,17 @@
-let statusList = ['Symulator Bota', 'rozkazów Kvby', 'http://kvba.pl/']
-let time = 60
+const statuses = require("../config.json").profile.statuses
+const frequency = require("../config.json").profile.frequency
 
 const status = (client) => {
     client.on('ready', () => {
 
         setInterval(() => {
-            let nr = Math.floor(Math.random() * statusList.length)
-            let status = statusList[nr]
+            let nr = Math.floor(Math.random() * statuses.length)
+            let status = statuses[nr]
             client.user.setStatus('online')
             client.user.setPresence({
                 activities: [{ name: status, type: nr + 1 }], status: 'dnd'
             })
-        }, time * 20)
+        }, frequency * 20)
 
     })
 }

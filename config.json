@@ -1,0 +1,23 @@
+{
+    "profile": {
+        "statuses": [
+            "Bot Simulator",
+            "rozkazów kuby"
+        ],
+        "frequency": 60
+    },
+    "verify": {
+        "messages": {
+            "goodVerifyClick": [
+                "Yeah, you are good",
+                "No, i szybko poszło co?",
+                "Thank you, NEXT"
+            ],
+            "otherVerifyClick": [
+                "Kliknij może swoją weryfikację, co?",
+                "Jeśli nie twoje, to nie ruszaj..",
+                "Nie ten przycisk, mordeczko"
+            ]
+        }
+    }
+}

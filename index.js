@@ -18,7 +18,7 @@ const client = new Client({
 
 
 client.on('ready', () => {
-    console.log(`\nLogged in as `.green.bold + `${client.user.tag}`.white.bold + `!`.green.bold + `\n`)
+    console.log(`\nLogged in as `.green.bold + `${client.user.username}`.white.bold + `!`.green.bold + `\n`)
 })
 
 

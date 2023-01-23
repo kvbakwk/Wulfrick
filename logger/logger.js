@@ -6,10 +6,10 @@ const delMsg = require('./delMsg')
 
 const logger = (client) => {
 
-    client.on('messageCreate', async msg => {
-        if (msg.author.bot) return
-        newMsg(client, msg)
-    })
+    // client.on('messageCreate', async msg => {
+    //     if (msg.author.bot) return
+    //     newMsg(client, msg)
+    // })
     client.on('messageDelete', async msg => {
         if (msg.author.bot) return
         delMsg(client, msg)
