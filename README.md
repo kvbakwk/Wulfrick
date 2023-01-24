@@ -1,5 +1,2 @@
-# Wulfrick
+## Wulfrick
 Discord Bot
-
-
-*kubalfw*
