@@ -27,4 +27,4 @@ logger(client)
 verify(client)
 
 
-client.login('ODk1MzM4Mzc4NTI1MDI4NDM0.GdVEE3.RVkSFWIS8peGDnHCfevcgj3GkLYeKAYPNUM6Y0')
+client.login(require('./token.json'))
