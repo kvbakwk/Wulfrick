@@ -18,6 +18,15 @@
                 "Jeśli nie twoje, to nie ruszaj..",
                 "Nie ten przycisk, mordeczko"
             ]
+        },
+        "embeds": {
+            "verify": {
+                "author": "Witaj {0} w Kuba's Community!",
+                "icon": "https://cdn.discordapp.com/avatars/{0}/{1}.webp?size=128",
+                "color": "#4F7942",
+                "description": "Miło Cię tu widzieć! Ale olejmy te uprzejmości. \nJesteś tu, bo wolę nie wpuszczać tutaj jakichś wścibskich botów, wiesz o co chodzi. Kliknij poniższy przycisk, a oszczędzisz sobie tych uprzejmości z mojej strony i dotrzesz tam, dokąd dotrzeć (chyba) chciałeś. Powodzonka.",
+                "button": "Zweryfikuj się"
+            }
         }
     }
 }

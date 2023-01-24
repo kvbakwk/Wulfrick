@@ -27,12 +27,4 @@ logger(client)
 verify(client)
 
 
-client.on('interactionCreate', async i => {
-    if (!i.isChatInputCommand()) return
-
-    if (i.commandName === 'ping') {
-        await i.reply('Pong!');
-    }
-})
-
 client.login('ODk1MzM4Mzc4NTI1MDI4NDM0.GdVEE3.RVkSFWIS8peGDnHCfevcgj3GkLYeKAYPNUM6Y0')

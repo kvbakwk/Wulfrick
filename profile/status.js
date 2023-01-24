@@ -9,7 +9,11 @@ const status = (client) => {
             let status = statuses[nr]
             client.user.setStatus('online')
             client.user.setPresence({
-                activities: [{ name: status, type: nr + 1 }], status: 'dnd'
+                activities: [{
+                    name: status,
+                    type: nr + 1
+                }],
+                status: 'dnd'
             })
         }, frequency * 20)
 
