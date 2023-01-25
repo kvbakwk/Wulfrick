@@ -1,4 +1,32 @@
 {
+    "lobby": {
+        "welcomeId": "",
+        "goodbyeId": ""
+    },
+    "logger": {
+        "channelId": "945105819882651658",
+        "newData": {
+            "title": "Nowa Wiadomość",
+            "color": "#4F7942",
+            "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Wiadomość:**\n{3}{4}",
+            "attachments": "\n**Załączniki**:\n{0}",
+            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+        },
+        "editData": {
+            "title": "Edycja Wiadomości",
+            "color": "#E1C06E",
+            "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Przed:**\n{3}{4}\n**Po:**\n{5}{6}",
+            "attachments": "\n**Załączniki**:\n{0}",
+            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+        },
+        "delData": {
+            "title": "Usunięta Wiadomość",
+            "color": "#A52A2A",
+            "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Wiadomość:**\n{3}{4}",
+            "attachments": "\n**Załączniki**:\n{0}",
+            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+        }
+    },
     "profile": {
         "statuses": [
             "Bot Simulator",

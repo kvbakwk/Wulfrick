@@ -3,6 +3,7 @@ const colors = require('colors')
 const logger = require('./logger/logger')
 const verify = require('./veryfication/verify')
 const status = require('./profile/status')
+const lobby = require('./lobby/lobby')
 
 
 
@@ -25,6 +26,7 @@ client.on('ready', () => {
 status(client)
 logger(client)
 verify(client)
+lobby(client)
 
 
 client.login(require('./token.json'))
