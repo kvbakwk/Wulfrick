@@ -19,7 +19,7 @@ const delMsg = (c, msg) => {
         is = true
     }
 
-    const e = config.delData
+    const e = config.deleteMessage
     const embed = new EmbedBuilder()
         .setAuthor({ name: e.title, iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=128` })
         .setColor(e.color)

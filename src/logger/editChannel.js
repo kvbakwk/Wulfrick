@@ -1,35 +1,37 @@
 const { EmbedBuilder } = require('discord.js')
 const config = require('../config.json').logger
 
-const newMsg = (c, msg) => {
+const editChannel = (c, ch1, ch2) => {
 
     const date = new Date()
-    let attachments = ''
-    let is = false
+    let type = 'Nieznany'
 
-    if (msg.attachments.size) {
-        let length = msg.attachments.size
-        let temp = 1
-        msg.attachments.map(attachement => {
-            attachments += attachement.url
-            if (temp != length)
-                attachments += '\n'
-            temp++
-        })
-        is = true
-    }
+    const e = config.editChannel
+    if (ch1.type == 0)
+        type = e.textChannel
+    else if (ch1.type == 2)
+        type = e.voiceChannel
+    else if (ch1.type == 4)
+        type = e.categoryChannel
+    else if (ch1.type == 5)
+        type = e.announcementChannel
+    else if (ch1.type == 10 || ch1.type == 11 || ch1.type == 12)
+        type = e.threadChannel
+    else if (ch1.type == 13)
+        type = e.radioChannel
+    else if (ch1.type == 15)
+        type = e.forumChannel
+    else
+        return
 
-    const e = config.newData
     const embed = new EmbedBuilder()
-        .setAuthor({ name: e.title, iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=128` })
+        .setAuthor({ name: e.title.replace('{0}', type), iconURL: `https://cdn.discordapp.com/attachments/483732868993122317/1067944899552481310/channel.png` })
         .setColor(e.color)
         .setDescription(
             e.description
-                .replace('{0}', msg.author.id)
-                .replace('{1}', msg.author.tag)
-                .replace('{2}', msg.channelId)
-                .replace('{3}', msg.content)
-                .replace('{4}', is ? e.attachments.replace('{0}', attachments) : '')
+                .replace('{0}', ch1.name)
+                .replace('{1}', ch2.name)
+                .replace('{2}', ch2.parent.name)
         )
         .setFooter({
             text: e.footer
@@ -43,4 +45,5 @@ const newMsg = (c, msg) => {
     c.channels.cache.get(config.channelId).send({ embeds: [embed] })
 }
 
-module.exports = newMsg
+
+module.exports = editChannel

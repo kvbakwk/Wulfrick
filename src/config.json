@@ -5,25 +5,64 @@
     },
     "logger": {
         "channelId": "945105819882651658",
-        "newData": {
+        "createMessage": {
             "title": "Nowa Wiadomość",
             "color": "#4F7942",
             "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Wiadomość:**\n{3}{4}",
             "attachments": "\n**Załączniki**:\n{0}",
             "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
         },
-        "editData": {
+        "editMessage": {
             "title": "Edycja Wiadomości",
             "color": "#E1C06E",
             "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Przed:**\n{3}{4}\n**Po:**\n{5}{6}",
             "attachments": "\n**Załączniki**:\n{0}",
             "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
         },
-        "delData": {
+        "deleteMessage": {
             "title": "Usunięta Wiadomość",
             "color": "#A52A2A",
             "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Wiadomość:**\n{3}{4}",
             "attachments": "\n**Załączniki**:\n{0}",
+            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+        },
+        "createChannel": {
+            "title": "Nowy {0}",
+            "color": "#FFFFFF",
+            "description": "**Nazwa:** <#{0}> ||{1}||\n**Kategoria:** {3}",
+            "textChannel": "Kanał Tekstowy",
+            "voiceChannel": "Kanał Głosowy",
+            "categoryChannel": "Kategoria",
+            "announcementChannel": "Kanał Powiadomieniowy",
+            "threadChannel": "Wątek",
+            "radioChannel": "Kanał Radio",
+            "forumChannel": "Kanał Forum",
+            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+        },
+        "deleteChannel": {
+            "title": "Usunięty {0}",
+            "color": "#FFFFFF",
+            "description": "**Nazwa:** {0}\n**Kategoria:** {1}",
+            "textChannel": "Kanał Tekstowy",
+            "voiceChannel": "Kanał Głosowy",
+            "categoryChannel": "Kategoria",
+            "announcementChannel": "Kanał Powiadomieniowy",
+            "threadChannel": "Wątek",
+            "radioChannel": "Kanał Radio",
+            "forumChannel": "Kanał Forum",
+            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+        },
+        "editChannel": {
+            "title": "Edycja {0}",
+            "color": "#FFFFFF",
+            "description": "**Nazwa:** {0} -> {1}\n**Kategoria:** {2}",
+            "textChannel": "Kanału Tekstowego",
+            "voiceChannel": "Kanału Głosowego",
+            "categoryChannel": "Kategorii",
+            "announcementChannel": "Kanału Powiadomieniowego",
+            "threadChannel": "Wątku",
+            "radioChannel": "Kanału Radio",
+            "forumChannel": "Kanału Forum",
             "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
         }
     },

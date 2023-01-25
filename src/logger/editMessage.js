@@ -32,7 +32,7 @@ const editMsg = (c, msg1, msg2) => {
         is2 = true
     }
 
-    const e = config.editData
+    const e = config.editMessage
     const embed = new EmbedBuilder()
         .setAuthor({ name: e.title, iconURL: `https://cdn.discordapp.com/avatars/${msg1.author.id}/${msg1.author.avatar}.webp?size=128` })
         .setColor(e.color)
