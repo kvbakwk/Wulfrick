@@ -61,7 +61,7 @@ const deleteVerify = (c, gMember) => {
 }
 
 const verifyClick = (c, i) => {
-    if (i.isButton()) {
+    if (i.isButton() && i.customId.length == 18) {
         if (i.customId == i.member.user.id) {
             const messages = config.messages.goodVerifyClick
             i.member.roles.remove(c.guilds.cache.get('489087056241229845').roles.cache.get('501127326453465088'))
@@ -85,7 +85,7 @@ const verifyClick = (c, i) => {
             return true
         } else if (i.customId.toString().length) {
             const messages = config.messages.otherVerifyClick
-            console.log(c.guilds.cache.get(i.guildId).channels.cache.get(i.channelId).messages.cache.at(0))
+            // console.log(c.guilds.cache.get(i.guildId).channels.cache.get(i.channelId).messages.cache.at(0))
             i.reply({
                 content: messages[Math.floor(Math.random() * messages.length)],
                 ephemeral: true

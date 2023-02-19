@@ -95,5 +95,19 @@
                 "button": "Zweryfikuj się"
             }
         }
+    },
+    "private": {
+        "messages": {
+            "privateCreate": "No i się udało! Zapraszam na Twój nowy kanał <#{0}>"
+        },
+        "embeds": {
+            "main": {
+                "title": "Własny kanał prywatny | Zaczynajmy!",
+                "color": "#38A88C",
+                "description": "Ten szybki kreatorek, pozwoli Ci stworzyć __własny__ kanał. \nBędziesz mógł na nim bez przeszkód dodawać, usuwać swoich znajomych oraz rozmawiać z nimi na **własnych zasadach**! \n\nMaksymalna ilość kanałów jakie możesz stworzyć wynosi: **{0}**",
+                "maxChannels": 1,
+                "button": "Stwórz Kanał"
+            }
+        }
     }
 }

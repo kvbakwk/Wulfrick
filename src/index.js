@@ -4,6 +4,7 @@ const logger = require('./logger/logger')
 const verify = require('./veryfication/verify')
 const status = require('./profile/status')
 const lobby = require('./lobby/lobby')
+const private = require('./private/private')
 
 
 
@@ -28,6 +29,7 @@ status(client)
 logger(client)
 verify(client)
 lobby(client)
+private(client)
 
 
 client.login(require('./token.json'))
