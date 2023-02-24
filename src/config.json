@@ -97,6 +97,7 @@
         }
     },
     "private": {
+        "channelName": "🔓{0}",
         "messages": {
             "privateCreate": "No i się udało! Zapraszam na Twój nowy kanał <#{0}>"
         },
@@ -107,6 +108,11 @@
                 "description": "Ten szybki kreatorek, pozwoli Ci stworzyć __własny__ kanał. \nBędziesz mógł na nim bez przeszkód dodawać, usuwać swoich znajomych oraz rozmawiać z nimi na **własnych zasadach**! \n\nMaksymalna ilość kanałów jakie możesz stworzyć wynosi: **{0}**",
                 "maxChannels": 1,
                 "button": "Stwórz Kanał"
+            },
+            "welcome": {
+                "title": "Witaj {0}!",
+                "color": "#38A88C",
+                "description": "To Twój i __tylko__ Twój kanał na wyłączność. \nMożesz robić na nim i z nim co chcesz, przestrzegając oczywiście nasz skromny regulamin. \nFunkcjonalności jakie oferujemy opisane są... tutaj: \n\n\n\n \n_Śmiało możesz usunąć tę wiadomość_"
             }
         }
     }
