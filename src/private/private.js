@@ -1,10 +1,18 @@
 const newChannel = require('./newChannel')
 const mainMessage = require('./mainMessage')
+const commands = require('./commands')
 
 const private = (client) => {
     // client.on('ready', async i => {
     //     mainMessage(client, i)
     // })
+    client.on('interactionCreate', async i => {
+        newChannel(client, i)
+        if (i.isChatInputCommand() && i.commandName == 'private') {
+            console.log(i)
+            commands(client, i)
+        }
+    })
     client.on('interactionCreate', async i => {
         newChannel(client, i)
     })

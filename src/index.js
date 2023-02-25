@@ -31,5 +31,7 @@ verify(client)
 lobby(client)
 private(client)
 
+console.log(client)
+
 
 client.login(require('./token.json'))

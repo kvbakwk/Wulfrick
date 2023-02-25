@@ -112,7 +112,7 @@
             "welcome": {
                 "title": "Witaj {0}!",
                 "color": "#38A88C",
-                "description": "To Twój i __tylko__ Twój kanał na wyłączność. \nMożesz robić na nim i z nim co chcesz, przestrzegając oczywiście nasz skromny regulamin. \nFunkcjonalności jakie oferujemy opisane są... tutaj: \n\n\n\n \n_Śmiało możesz usunąć tę wiadomość_"
+                "description": "Znajdujesz się na własnym kanale, w miejscu do **Twojej** dyspozycji. \nMożesz robić tutaj co chcesz, pamiętając o naszym skromnym regulaminie. \nFunkcjonalności jakie oferujemy opisane są... tutaj: \n\n\n\n \n_śmiało możesz usunąć tę wiadomość_"
             }
         }
     }

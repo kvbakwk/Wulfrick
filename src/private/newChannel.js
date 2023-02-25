@@ -13,7 +13,7 @@ const newChannel = (c, i) => {
                 position: 1000,
                 permissionOverwrites: [{
                     id: i.user.id,
-                    allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.SendMessages]
+                    allow: [PermissionFlagsBits.ViewChannel, PermissionFlagsBits.SendMessages, PermissionFlagsBits.ManageMessages]
                 }, {
                     id: c.guilds.cache.get('489087056241229845').roles.everyone.id,
                     deny: [PermissionFlagsBits.ViewChannel]
@@ -31,11 +31,11 @@ const newChannel = (c, i) => {
                         content.description
                     )
 
-                i.reply({
-                    content: config.messages.privateCreate
-                        .replace('{0}', channel.id),
-                    ephemeral: true
-                })
+                // i.reply({
+                //     content: config.messages.privateCreate
+                //         .replace('{0}', channel.id),
+                //     ephemeral: true
+                // })
                 channel.send({ embeds: [embed] })
             })
     }
