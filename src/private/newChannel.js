@@ -31,11 +31,11 @@ const newChannel = (c, i) => {
                         content.description
                     )
 
-                // i.reply({
-                //     content: config.messages.privateCreate
-                //         .replace('{0}', channel.id),
-                //     ephemeral: true
-                // })
+                i.reply({
+                    content: config.messages.privateCreate
+                        .replace('{0}', channel.id),
+                    ephemeral: true
+                })
                 channel.send({ embeds: [embed] })
             })
     }

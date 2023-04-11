@@ -8,13 +8,6 @@ const private = (client) => {
     // })
     client.on('interactionCreate', async i => {
         newChannel(client, i)
-        if (i.isChatInputCommand() && i.commandName == 'private') {
-            console.log(i)
-            commands(client, i)
-        }
-    })
-    client.on('interactionCreate', async i => {
-        newChannel(client, i)
     })
 }
 
