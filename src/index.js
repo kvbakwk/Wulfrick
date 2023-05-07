@@ -1,35 +1,24 @@
-const { Client, GatewayIntentBits } = require('discord.js')
-const colors = require('colors')
-const logger = require('./logger/logger')
-const verify = require('./veryfication/verify')
-const status = require('./profile/status')
-const lobby = require('./lobby/lobby')
-const private = require('./private/private')
+const { Ready, MessageCreate, MessageUpdate, MessageDelete, ChannelCreate, ChannelUpdate, ChannelDelete, GuildMemberAdd, GuildMemberRemove } = require('./handlers/Handlers')
+const { InitManager, LobbyManager } = require('./managers/Managers')
+const { config, token } = require('./files/Files')
 
 
-
-const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMembers,
-        GatewayIntentBits.GuildIntegrations
-    ],
-})
+console.log('Loading...\n')
+console.log('Managers:')
+const { client, init } = InitManager()
+const { joinUser, leaveUser } = LobbyManager(config)
 
 
+console.log('Handlers:')
+Ready(client, init)
+MessageCreate(client)
+MessageUpdate(client)
+MessageDelete(client)
+ChannelCreate(client)
+ChannelUpdate(client)
+ChannelDelete(client)
+GuildMemberAdd(client, joinUser)
+GuildMemberRemove(client, leaveUser)
 
-client.on('ready', () => {
-    console.log(`\nLogged in as `.green.bold + `${client.user.username}`.white.bold + `!`.green.bold + `\n`)
-})
 
-
-status(client)
-logger(client)
-verify(client)
-lobby(client)
-private(client)
-
-
-client.login(require('./token.json'))
+client.login(token)
