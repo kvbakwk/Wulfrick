@@ -1,6 +1,6 @@
 const LobbyManager = (config) => {
 
-    const beatify = date => {
+    const dateFormat = date => {
         const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
         const month = date.getMonth() + 1 < 10 ? '0' + (parseInt(date.getMonth()) + 1) : parseInt(date.getMonth()) + 1
         const year = date.getFullYear()
@@ -13,7 +13,7 @@ const LobbyManager = (config) => {
 
 
     const joinUser = (c, member) => {
-        const { day, month, year, hours, minutes, seconds } = beatify(member.joinedAt)
+        const { day, month, year, hours, minutes, seconds } = dateFormat(member.joinedAt)
 
         const message = `:inbox_tray: <@${member.user.id}>! \`\`${member.user.tag}\`\` ||${member.user.id}|| ${day}/${month}/${year} • ${hours}:${minutes}:${seconds}`
 
@@ -21,11 +21,11 @@ const LobbyManager = (config) => {
     }
 
     const leaveUser = (c, member) => {
-        const { day, month, year, hours, minutes, seconds } = beatify(member.joinedAt)
+        const { day, month, year, hours, minutes, seconds } = dateFormat(member.joinedAt)
 
         const message = `:outbox_tray: <@${member.user.id}>! \`\`${member.user.tag}\`\` ||${member.user.id}|| ${day}/${month}/${year} • ${hours}:${minutes}:${seconds}`
 
-        c.channels.cache.get(config.lobby.welcomeId).send(message)
+        c.channels.cache.get(config.lobby.goodbyeId).send(message)
     }
 
     console.log('\tLobby -> success')

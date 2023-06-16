@@ -1,10 +1,9 @@
-const statuses = require("../config.json").profile.statuses
-const frequency = require("../config.json").profile.frequency
+const ProfileManager = (client, config) => {
 
-const status = (client) => {
-    client.on('ready', () => {
+    const { statuses, frequency } = config.profile
 
-        setInterval(() => {
+    setInterval(() => {
+        try {
             let nr = Math.floor(Math.random() * statuses.length)
             let status = statuses[nr]
             client.user.setStatus('online')
@@ -15,10 +14,10 @@ const status = (client) => {
                 }],
                 status: 'dnd'
             })
-        }, frequency * 20)
+        } catch (e) { }
+    }, frequency * 20)
 
-    })
+    console.log('\tProfile -> success')
 }
 
-
-module.exports = status
+module.exports = ProfileManager;

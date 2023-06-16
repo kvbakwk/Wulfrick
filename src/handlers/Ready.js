@@ -1,10 +1,8 @@
-const Ready = (client, init) => {
+const Ready = (client) => {
 
-    client.on('ready', (event) => {
-        init(client, event)
-    })
+    client.on('ready', e => { })
 
-    console.log('\tReady(1) -> success')
+    console.log('\tReady(0) -> success')
 }
 
 module.exports = Ready;

@@ -12,11 +12,8 @@ const InitManager = () => {
         ],
     })
 
-    const init = () => {
-
-    }
-
-    return { client, init };
+    console.log('\tInit -> success')
+    return { client };
 }
 
 module.exports = InitManager;

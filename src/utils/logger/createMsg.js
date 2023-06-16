@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js')
-const config = require('../config.json').logger
 
-const delMsg = (c, msg) => {
+const createMsg = (c, config, msg) => {
+    if (msg.author.bot) return
 
     const date = new Date()
     let attachments = ''
@@ -19,7 +19,7 @@ const delMsg = (c, msg) => {
         is = true
     }
 
-    const e = config.deleteMessage
+    const e = config.logger.createMessage
     const embed = new EmbedBuilder()
         .setAuthor({ name: e.title, iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=128` })
         .setColor(e.color)
@@ -40,7 +40,7 @@ const delMsg = (c, msg) => {
                 .replace('{4}', date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
                 .replace('{5}', date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds())
         })
-    c.channels.cache.get(config.channelId).send({ embeds: [embed] })
+    c.channels.cache.get(config.logger.channelId).send({ embeds: [embed] })
 }
 
-module.exports = delMsg
+module.exports = createMsg

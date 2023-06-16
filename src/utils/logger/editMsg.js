@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js')
-const config = require('../config.json').logger
 
-const editMsg = (c, msg1, msg2) => {
+const editMsg = (c, config, msg1, msg2) => {
+    if (msg1.author.bot) return
 
     const date = new Date()
     let attachments1 = ''
@@ -32,7 +32,7 @@ const editMsg = (c, msg1, msg2) => {
         is2 = true
     }
 
-    const e = config.editMessage
+    const e = config.logger.editMessage
     const embed = new EmbedBuilder()
         .setAuthor({ name: e.title, iconURL: `https://cdn.discordapp.com/avatars/${msg1.author.id}/${msg1.author.avatar}.webp?size=128` })
         .setColor(e.color)
@@ -55,7 +55,7 @@ const editMsg = (c, msg1, msg2) => {
                 .replace('{4}', date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
                 .replace('{5}', date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds())
         })
-    c.channels.cache.get(config.channelId).send({ embeds: [embed] })
+    c.channels.cache.get(config.logger.channelId).send({ embeds: [embed] })
 }
 
 module.exports = editMsg

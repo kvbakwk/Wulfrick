@@ -7,6 +7,7 @@ const ChannelUpdate = require('./ChannelUpdate')
 const ChannelDelete = require('./ChannelDelete')
 const GuildMemberAdd = require('./GuildMemberAdd')
 const GuildMemberRemove = require('./GuildMemberRemove')
+const InteractionCreate = require('./InteractionCreate')
 
 module.exports = {
     Ready,
@@ -17,5 +18,6 @@ module.exports = {
     ChannelUpdate,
     ChannelDelete,
     GuildMemberAdd,
-    GuildMemberRemove
+    GuildMemberRemove,
+    InteractionCreate
 }
