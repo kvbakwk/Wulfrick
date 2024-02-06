@@ -1,8 +1,8 @@
-const { editMsg, deleteMsg } = require('../utils/logger/logger')
+const { editMsg, deleteMsg } = require("../utils/logger/logger");
 
 const LoggerManager = () => {
-    console.log('\tLogger -> success')
-    return { editMsg, deleteMsg }
-}
+  console.log("\tLogger -> success");
+  return { editMsg, deleteMsg };
+};
 
-module.exports = LoggerManager
+module.exports = LoggerManager;

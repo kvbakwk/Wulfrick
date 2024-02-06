@@ -1,8 +1,7 @@
 const Ready = (client) => {
+  client.on("ready", (e) => {});
 
-    client.on('ready', e => { })
-
-    console.log('\tReady(0) -> success')
-}
+  console.log("\tReady(0) -> success");
+};
 
 module.exports = Ready;
