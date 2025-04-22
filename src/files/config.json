@@ -6,25 +6,25 @@
     "logger": {
         "channelId": "945105819882651658",
         "createMessage": {
-            "title": "Nowa Wiadomość",
+            "title": "nowa wiadomość",
             "color": "#4F7942",
-            "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Wiadomość:**\n{3}{4}",
-            "attachments": "\n**Załączniki**:\n{0}",
-            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+            "description": "**użytkownik:** <@{0}> ``{1}``\n**kanał:** <#{2}>\n**wiadomość:**\n{3}{4}",
+            "attachments": "\n**załączniki**:\n{0}",
+            "footer": "data: {0}/{1}/{2} • godzina: {3}:{4}:{5}"
         },
         "editMessage": {
-            "title": "Edycja Wiadomości",
+            "title": "edycja wiadomości",
             "color": "#E1C06E",
-            "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Przed:**\n{3}{4}\n**Po:**\n{5}{6}",
-            "attachments": "\n**Załączniki**:\n{0}",
-            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+            "description": "**użytkownik:** <@{0}> ``{1}``\n**kanał:** <#{2}>\n**przed:**\n{3}{4}\n**po:**\n{5}{6}",
+            "attachments": "\n**załączniki**:\n{0}",
+            "footer": "data: {0}/{1}/{2} • godzina: {3}:{4}:{5}"
         },
         "deleteMessage": {
-            "title": "Usunięta Wiadomość",
+            "title": "usunięta wiadomość",
             "color": "#A52A2A",
-            "description": "**Użytkownik:** <@{0}> ``{1}``\n**Kanał:** <#{2}>\n**Wiadomość:**\n{3}{4}",
-            "attachments": "\n**Załączniki**:\n{0}",
-            "footer": "Data: {0}/{1}/{2} • Godzina: {3}:{4}:{5}"
+            "description": "**użytkownik:** <@{0}> ``{1}``\n**kanał:** <#{2}>\n**wiadomość:**\n{3}{4}",
+            "attachments": "\n**załączniki**:\n{0}",
+            "footer": "data: {0}/{1}/{2} • godzina: {3}:{4}:{5}"
         },
         "createChannel": {
             "title": "Nowy {0}",
@@ -76,43 +76,43 @@
     "verify": {
         "messages": {
             "goodVerifyClick": [
-                "Yeah, you are good",
-                "No, i szybko poszło co?",
-                "Thank you, NEXT"
+                "yeah, you are good",
+                "no, i szybko poszło co?",
+                "thank you, NEXT"
             ],
             "otherVerifyClick": [
-                "Kliknij może swoją weryfikację, co?",
-                "Jeśli nie twoje, to nie ruszaj..",
-                "Nie ten przycisk, mordeczko"
+                "kliknij może swoją weryfikację, co?",
+                "jeśli nie twoje, to nie ruszaj..",
+                "nie ten przycisk, mordeczko"
             ]
         },
         "embeds": {
             "verify": {
-                "author": "Witaj {0} w Kuba's Community!",
+                "author": "witaj {0} w proste.",
                 "icon": "https://cdn.discordapp.com/avatars/{0}/{1}.webp?size=128",
                 "color": "#4F7942",
-                "description": "Miło Cię tu widzieć! Ale olejmy te uprzejmości. \nJesteś tu, bo wolę nie wpuszczać tutaj jakichś wścibskich botów, wiesz o co chodzi. Kliknij poniższy przycisk, a oszczędzisz sobie tych uprzejmości z mojej strony i dotrzesz tam, dokąd dotrzeć (chyba) chciałeś. Powodzonka.",
-                "button": "Zweryfikuj się"
+                "description": "miło Cię tu widzieć! ale olejmy te uprzejmości. \njesteś tu, bo wolę nie wpuszczać tutaj jakichś wścibskich botów, wiesz o co chodzi. kliknij poniższy przycisk, a oszczędzisz sobie tych uprzejmości z mojej strony i dotrzesz tam, dokąd dotrzeć (chyba) chciałeś. powodzonka.",
+                "button": "zweryfikuj się"
             }
         }
     },
     "private": {
         "channelName": "🔓{0}",
         "messages": {
-            "privateCreate": "No i się udało! Zapraszam na Twój nowy kanał <#{0}>"
+            "privateCreate": "no i się udało! zapraszam na Twój nowy kanał <#{0}>"
         },
         "embeds": {
             "main": {
-                "title": "Własny kanał prywatny | Zaczynajmy!",
+                "title": "własny kanał prywatny | zaczynajmy!",
                 "color": "#38A88C",
-                "description": "Ten szybki kreatorek, pozwoli Ci stworzyć __własny__ kanał. \nBędziesz mógł na nim bez przeszkód dodawać, usuwać swoich znajomych oraz rozmawiać z nimi na **własnych zasadach**! \n\nMaksymalna ilość kanałów jakie możesz stworzyć wynosi: **{0}**",
+                "description": "ten szybki kreatorek, pozwoli Ci stworzyć __własny__ kanał. \nbędziesz mógł na nim bez przeszkód dodawać, usuwać swoich znajomych oraz rozmawiać z nimi na **własnych zasadach**! \n\nmaksymalna ilość kanałów jakie możesz stworzyć wynosi: **{0}**",
                 "maxChannels": 1,
-                "button": "Stwórz Kanał"
+                "button": "stwórz kanał"
             },
             "welcome": {
-                "title": "Witaj {0}!",
+                "title": "witaj {0}!",
                 "color": "#38A88C",
-                "description": "Znajdujesz się na własnym kanale, w miejscu do **Twojej** dyspozycji. \nMożesz robić tutaj co chcesz, pamiętając o naszym skromnym regulaminie. \nFunkcjonalności jakie oferujemy opisane są... tutaj: \n\n\n\n \n_śmiało możesz usunąć tę wiadomość_"
+                "description": "znajdujesz się na własnym kanale, w miejscu do **Twojej** dyspozycji. \nmożesz robić tutaj co chcesz, pamiętając o naszym skromnym regulaminie. \nfunkcjonalności jakie oferujemy opisane są... tutaj: \n\n\n\n \n_śmiało możesz usunąć tę wiadomość_"
             }
         }
     }
