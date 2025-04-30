@@ -1,1 +1,1 @@
-_ŵulfrick_
+_discord bot_
